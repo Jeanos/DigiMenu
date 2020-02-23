@@ -1,7 +1,6 @@
 import React from 'react';
 import MainHeader from '../comps/MainHeader';
-
-import {action} from '@storybook/addon-actions';
+//import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'MainHeader',
