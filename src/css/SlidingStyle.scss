@@ -1,0 +1,24 @@
+@mixin flex($dir:column){
+  display:flex;
+  flex-direction: $dir;
+}
+
+.slidingmenu{
+    @include flex();
+
+    width:300px;
+    background-color:#FAD;
+    color:#339;
+}
+
+.slide {
+  max-width:100vh !important;
+}
+
+.before_left{
+  left:-100vw;
+}
+
+.after_left{
+  left:0;
+}
