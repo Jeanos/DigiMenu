@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import MenuItem from './MenuItem';
 // import './menu.scss';
 
 //children is a react component setting
@@ -18,7 +19,7 @@ function SlidingMenu({items, menuTitle, children, slideright}){
             <div id="item_cont" className={slide?"slide":""}>
                 {items.map((o,i)=>{
                     return (
-                        <div> hello </div>
+                        <MenuItem {...o} />
                     )
                 })}
             </div>
@@ -28,13 +29,15 @@ function SlidingMenu({items, menuTitle, children, slideright}){
 
 SlidingMenu.defaultProps = {
     items:[{
-        itemTitle:'Item 1'
+        itemTitle:'Dashboard'
     },{
-        itemTitle:'Item 2'
+        itemTitle:'Add Items'
+    },{
+        itemTitle:'View Menu'
     }],
     menuTitle:"Sliding Menu",
     children:null,
-    dropdown:false
+    slideright:false
 };
 
 export default SlidingMenu;

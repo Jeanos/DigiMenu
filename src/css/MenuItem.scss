@@ -1,0 +1,25 @@
+$active_color:#999;
+$m:10px;
+
+.menu_item{
+    background-color: #CCC;
+    margin:$m 0;
+    padding:10px;
+
+    &:active, &:hover{
+        background-color: $active_color;
+    }
+
+    &:first-of-type{
+        margin-top:20px;
+    }
+
+    &:last-of-type{
+        margin-bottom:$m*2;
+    }
+}
+
+.menu_item_active {
+    background-color: black;
+    color:white
+}
