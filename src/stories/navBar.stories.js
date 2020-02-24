@@ -1,5 +1,5 @@
 import React from 'react';
-import MainHeader from '../comps/MainHeader';
+import MainHeader from '../comps/menu/navbar/index';
 //import {action} from '@storybook/addon-actions';
 
 export default {
@@ -12,5 +12,9 @@ export const defaultMainHeader = () => {
 }
 
 export const defaultMainHeaderWithTitle = () => {
-  return <MainHeader MenuTitle="Settings"/>;
+  return <MainHeader MenuTitle="Add Items"/>;
+}
+
+export const defaultMainHeaderWithRestaurantName = () => {
+  return <MainHeader MenuTitle="Cactus Club"/>;
 }

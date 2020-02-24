@@ -1,5 +1,5 @@
 import React from 'react';
-import Dashboard from '../comps/dashboard';
+import Dashboard from '../comps/dashboard/index';
 //import {action} from '@storybook/addon-actions';
 
 export default {

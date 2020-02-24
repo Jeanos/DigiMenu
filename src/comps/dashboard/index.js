@@ -1,7 +1,7 @@
 import React , { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import DashboardItem from '../comps/dashboardItem';
-import '../css/main.css';
+import DashboardItem from '../../comps/dashboard/dashboardItem/index';
+import '../../css/main.css';
 // import TextField from '@material-ui/core/TextField';
 
 
