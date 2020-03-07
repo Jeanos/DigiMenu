@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body{
+    font-family:'Raleway';
+}
+
+#name {
+    margin-bottom: .1rem;
+}
+
+#startxt {
+    font-size:7pt;
+}
