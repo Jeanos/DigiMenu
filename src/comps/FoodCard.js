@@ -7,7 +7,7 @@ import NumberFormat from 'react-number-format';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      width: '55%',
       boxShadow: 'none',
       borderRadius: '0px'
     },
@@ -39,24 +39,27 @@ const useStyles = makeStyles({
     const classes = useStyles();
 
     return (
-      <Card className={classes.root}>
-        <CardMedia
-          className={classes.media}
-          image={food.image}
-          title={food.name}
-        />
-        <CardContent className={classes.cardContent}>
-            <div className={classes.infoContainer}>
-                <div className={classes.foodName}>{food.name}</div>
-                <div className={classes.foodPrice}>
-                    <NumberFormat value={food.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+      <div className="center">
+          <Card className={classes.root}>
+            <CardMedia
+              className={classes.media}
+              image={food.image}
+              title={food.name}
+            />
+            <CardContent className={classes.cardContent}>
+                <div className={classes.infoContainer}>
+                    <div className={classes.foodName}>{food.name}</div>
+                    <div className={classes.foodPrice}>
+                        <NumberFormat value={food.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                    </div>
                 </div>
-            </div>
-            <div className={classes.foodDescription}>
-                {food.description}
-            </div>
-        </CardContent>
+                <div className={classes.foodDescription}>
+                    {food.description}
+                </div>
+            </CardContent>
       </Card>
+      </div>
+    
     );
   }
 

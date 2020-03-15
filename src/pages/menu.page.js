@@ -10,7 +10,7 @@ import FoodCard from '../comps/FoodCard';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Input from '@material-ui/core/Input';
-import MainHeader from '../comps/MainHeader';
+import MainHeader from '../comps/menu/navbar/';
 
 const useStyles = makeStyles(theme => ({
     root: {

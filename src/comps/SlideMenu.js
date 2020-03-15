@@ -1,20 +1,21 @@
 import React,{useState} from 'react';
 import MenuItem from './MenuItem';
-// import './menu.scss';
+import './menu/index.scss';
 
 //children is a react component setting
 function SlidingMenu({items, menuTitle, children, slideright}){
     const [slide, setSlide] = useState(true);
 
 
+
     return(
-        <div 
+        <div className = 'menuItems'
             onClick={()=>{
                 setSlide(!slide);
             }} 
             className="slidingmenu"
         > 
-            <h3>{menuTitle}</h3>
+            {/* <h3>{menuTitle}</h3> */}
             {children}
             <div id="item_cont" className={slide?"slide":""}>
                 {items.map((o,i)=>{
@@ -29,11 +30,14 @@ function SlidingMenu({items, menuTitle, children, slideright}){
 
 SlidingMenu.defaultProps = {
     items:[{
-        itemTitle:'Dashboard'
+        key: '1',
+        itemTitle:' Dashboard'
     },{
-        itemTitle:'Add Items'
+        key: '2',
+        itemTitle:' Add Items'
     },{
-        itemTitle:'View Menu'
+        key: '3',
+        itemTitle:' View Menu'
     }],
     menuTitle:"Sliding Menu",
     children:null,

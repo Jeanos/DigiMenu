@@ -19,7 +19,7 @@ import Select from '@material-ui/core/Select';
 import { Input } from '@material-ui/core';
 
 import './index.scss';
-import '../../../css/app.scss';
+// import '../../../css/app.scss';
 // import TextField from '@material-ui/core/TextField';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import MainHeader from '../comps/MainHeader';
+import MainHeader from '../comps/menu/navbar/';
 import SlidingMenu from '../comps/SlideMenu';
 //import {action} from '@storybook/addon-actions';
 
