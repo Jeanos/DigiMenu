@@ -4,6 +4,13 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import NumberFormat from 'react-number-format';
+import {MdFavorite} from "react-icons/md";
+import {MdStar} from "react-icons/md";
+import {MdStarBorder} from "react-icons/md";
+
+
+
+
 
 const useStyles = makeStyles({
     root: {
@@ -31,7 +38,7 @@ const useStyles = makeStyles({
         fontWeight: 600
     },
     foodDescription: {
-
+        
     }
   });
 
@@ -50,10 +57,21 @@ const useStyles = makeStyles({
                 <div className={classes.infoContainer}>
                     <div className={classes.foodName}>{food.name}</div>
                     <div className={classes.foodPrice}>
-                        <NumberFormat value={food.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                        <MdFavorite size={20} />
                     </div>
                 </div>
+                
+                <div className={classes.foodPrice}>
+                        <div>
+                          <MdStar size={20} /><MdStar size={20} /><MdStar size={20} /><MdStar size={20} /><MdStarBorder size={20} />
+                        </div>
+                        <NumberFormat value={food.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                       
+                        
+                </div>
+               
                 <div className={classes.foodDescription}>
+                   
                     {food.description}
                 </div>
             </CardContent>

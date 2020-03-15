@@ -12,7 +12,7 @@ function SlidingMenu({items, menuTitle, children, slideright}){
         <div className = 'menuItems'
             onClick={()=>{
                 setSlide(!slide);
-            }} 
+            }}
             className="slidingmenu"
         > 
             {/* <h3>{menuTitle}</h3> */}

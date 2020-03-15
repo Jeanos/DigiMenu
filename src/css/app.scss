@@ -60,7 +60,14 @@ align-items: center;
 }
 
 .slidingmenu {
-    width: 30%;
-    background: #eee;
+    width: 100%;
+    background: #fff;
     border:1px solid #ddd;
+}
+
+.menuTitle{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  padding:20px;
 }

@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import '../../../css/app.scss';
 import { MdAddAPhoto } from "react-icons/md";
 
-
-
-
 export default class imageUploader extends Component {
 
     fileObj = [];

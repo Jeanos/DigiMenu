@@ -34,6 +34,9 @@ const useStyles = makeStyles(theme => ({
         margin: '35px 0',
         display: 'flex',
         justifyContent: 'center'
+    },
+    bottomBorder:{
+      bottomBorder: '1px solid #ddd',
     }
 }));
 
@@ -41,7 +44,14 @@ const foodItem = {
     name: 'Thai Red Curry + Prawns',
     image: 'https://ichef.bbci.co.uk/wwfeatures/live/624_351/images/live/p0/7c/j8/p07cj8zj.jpg',
     price: 22.99,
-    description: 'Description'
+    description: 'Thai coconut red Curry with prawns is easy, quick, and full of flavour! On your table in less than 25 minutes, dinner has never been so easy!'
+};
+
+const Hummus = {
+  name: 'Hummus',
+  image: 'https://www.cookingclassy.com/wp-content/uploads/2014/03/hummus-31.jpg',
+  price: 14.59,
+  description: 'Hummus, quick, and full of flavour! On your table in less than 25 minutes, dinner has never been so easy!'
 };
 
 export default function MenuPage() {
@@ -98,7 +108,8 @@ export default function MenuPage() {
           <Tab label="Dessert" />
         </Tabs>
         <FoodCategorySelect />
-        <FoodCard food={foodItem}/>
+        <FoodCard className="bottomBorder" food={foodItem}/>
+        <FoodCard food={Hummus}/>
     </div>
   )
 }
