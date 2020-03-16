@@ -54,9 +54,10 @@ SlidingMenu.defaultProps = {
     },{
         key: '3',
         itemTitle:' View Menu'
-    },{
-        key: '4',
-        itemTitle:' Account'
+    
+    // },{
+    //     key: '4',
+    //     itemTitle:' Account'
     }],
    
     menuTitle:"Sliding Menu",

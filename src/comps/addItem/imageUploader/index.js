@@ -35,7 +35,7 @@ export default class ImageUploader extends Component {
                 <form>
                 <div className="flexImageUpload">
                 <div className="form-group">
-                <label for="fileUpload" class="custom-file-upload " >
+                <label for="fileUpload" class="custom-file-upload" >
                     <MdAddAPhoto size={40}/>
                 </label>                    
                 <input id="fileUpload" type="file" name="Upload your Image" className="form-control" onChange={this.uploadMultipleFiles} multiple />
