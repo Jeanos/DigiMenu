@@ -1,8 +1,8 @@
 @mixin pageConfig {
 
-  background-Color: #eee !important;
+  background-Color: fff !important;
     border-Radius: 5px;
-    border-width: 1px;
+    border-width: 0px;
     border-style: solid;
     border-color: #ddd;
     display: flex;
@@ -30,6 +30,10 @@ input[type="file"] {
 display: none;
 }
 .custom-file-upload {
+justify-content: center;
+display: flex !important;
+border-radius: 10px;
+align-items: center;
 border-width: 1px ;
 border-color:#eee;
 background:white;
@@ -38,8 +42,8 @@ height: 100px;
 border-style:solid;
 border-color:  #ccc;
 display: inline-block;
-padding-left: 6px ;
-padding-right:12px;
+padding-left: 12px;
+padding-right: 12px;
 cursor: pointer;
 }
 .center{
@@ -47,17 +51,23 @@ display: flex;
 justify-content: center;
 align-content: center;
 align-items: center;
+margin: 10px;
 }
-
+.borderMe{
+  border: 1px solid #ddd;
+}
 .menu_item {
-  padding: 15px;
-  margin: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-bottom: 1px solid #ddd;
-
+  padding-bottom: 20px;
+  width: 100vw;
+  color: #2f2f2f;
 }
 .main{
 @include pageConfig();
 }
+
 
 .slidingmenu {
     width: 100%;
@@ -70,4 +80,48 @@ align-items: center;
   justify-content: center;
   align-content: center;
   padding:20px;
+}
+.greenDigimenu{
+  background: #54774d !important;
+  position: fixed;
+}
+
+.orangeDigimenu{
+  background: #f29142 !important;
+  color: white !important;
+}
+
+
+
+.makeStyles-root-242 > * {
+  width: 100%;
+  height: 128px;
+  margin: 0px;
+}
+
+.makeStyles-root-1 > * {
+  height: 128px;
+  margin: 0px !important;
+}
+
+.centerIt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(14px, -6px) scale(0.75);
+  background: white;
+  padding: 2px;
+}
+
+
+    
+.ButtonResize{
+  width: 40%;
+  background: #ddd !important;
+  margin-left: auto;
+  margin-right: auto;
 }

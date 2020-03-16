@@ -65,8 +65,8 @@ export default function MenuPage() {
 
   const SearchBar = () => {
     return (
-        <Paper component="form" className={classes.root}>
-           <IconButton type="submit" className={classes.iconButton} aria-label="search">
+        <Paper component="form" className={classes.root, "ButtonResize"}>
+           <IconButton type="submit"  className={classes.iconButton} aria-label="search">
             <SearchIcon />
           </IconButton>
           <InputBase
@@ -94,7 +94,7 @@ export default function MenuPage() {
   return (
     <div>
         <MainHeader/>
-        <SearchBar/>
+        <SearchBar />
         <Tabs value={value}
               indicatorColor="primary"
               textColor="primary"

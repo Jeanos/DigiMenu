@@ -3,38 +3,63 @@ import {FaBeer} from 'react-icons/fa';
 import {MdDashboard} from 'react-icons/md';
 import {MdAddToPhotos} from 'react-icons/md';
 import {MdRestaurantMenu} from 'react-icons/md';
+import {MdAccountCircle} from 'react-icons/md';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import DashboardPage from '../pages/dashboard.page';
+import AddMenuItem from '../pages/addMenu.page';
+import MenuPage from '../pages/menu.page';
+import '../css/app.scss';
 
-function MenuItem({itemTitle, onClick, active}){
+function MenuItemDigi({itemTitle, onClick, active}){
     var cn = "menu_item";
+    var goPath = '';
     var iconDefault = <FaBeer />;
-    if(active){ 
-        cn = "menu_item menu_item_active" 
-    }
+ 
 
     if (itemTitle ==" Dashboard"){
         iconDefault = <MdDashboard  size={20}/>
+        goPath = '/';
 
     }
 
     if (itemTitle ==" Add Items"){
         iconDefault = <MdAddToPhotos  size={20}/>
+        goPath = "/addMenu";
     }
 
       if (itemTitle ==" View Menu"){
         iconDefault = <MdRestaurantMenu  size={20}/>
+        goPath = "/viewMenu";
+    }
+    if (itemTitle ==" Account"){
+        iconDefault = <MdAccountCircle  size={20}/>
+        goPath = "/account";
     }
     return(
-        <div onClick={onClick} className={cn}>
-            {iconDefault} 
-            {itemTitle}
-        </div>
+        
+            <Link to={goPath}>
+            <div>
+                <div  className={cn}>                
+                    {iconDefault} 
+                    {itemTitle}
+                </div>   
+                    
+            </div>
+            </Link>
+       
+        
     )
 }
 
-MenuItem.defaultProps = {
+MenuItemDigi.defaultProps = {
     itemTitle:"Default Item",
     onClick:()=>{},
     active:false
 };
 
-export default MenuItem;
+export default MenuItemDigi;

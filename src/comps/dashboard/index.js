@@ -10,21 +10,25 @@ function Dashboard() {
   return (
     <div>
       <DashboardItem
+      key='0'
       title = "Scans"
       number = "0"
       />
 
       <DashboardItem
+      key='1'
       title = "Profit"
       number = "0"
       />
 
       <DashboardItem
+      key='2'
       title = "Categories"
       number = "0"
       />
 
       <DashboardItem
+      key='3'
       title = "Items"
       number = "0"
       />

@@ -84,15 +84,10 @@ function MemuItemDisplay() {
                 <p>{item.get('Price')} </p>
                 <p>{item.get('Description')} </p>
                 <img src={item.get('Attachments')[0].url} style={{width:'100%'}} alt="Logo" />
-   
               </div>)
          )}
-           
         </div>
       </div>
-
-  
-  
   );
 }
 

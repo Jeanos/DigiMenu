@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import ImageUploader from '../comps/addItem/imageUploader';
 import UploadForm from '../comps/addItem/uploadForm';
 import MainHeader from '../comps/menu/navbar/';
+import Dashboard from '../comps/dashboard/';
 
 const CustomStyle = makeStyles(theme => ({
   root: {
@@ -17,17 +18,18 @@ const CustomStyle = makeStyles(theme => ({
   },
 }));
 
-export default function AddMenuItem() {
+export default function DashboardPage() {
   const classes = CustomStyle();
     return (
-      <div >
-        <MainHeader MenuTitle="Add a new Item on your menu"/>
+      <div>
+        <MainHeader MenuTitle="Dashboard"/>
         <div className={classes.root}>
-          <div>
-            <ImageUploader />
-            <UploadForm />
-          </div>
+        <div>
+        <Dashboard />
         </div>
+                 
+          
+    </div>
       </div>
      
     );

@@ -1,6 +1,17 @@
 import React,{useState} from 'react';
-import MenuItem from './MenuItem';
-import './menu/index.scss';
+import MenuItemDigi from './MenuItem';
+import MenuItem from '@material-ui/core/MenuItem';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import DashboardPage from '../pages/dashboard.page';
+import AddMenuItem from '../pages/addMenu.page';
+import MenuPage from '../pages/menu.page';
+
+
 
 //children is a react component setting
 function SlidingMenu({items, menuTitle, children, slideright}){
@@ -13,6 +24,7 @@ function SlidingMenu({items, menuTitle, children, slideright}){
             onClick={()=>{
                 setSlide(!slide);
             }}
+            // eslint-disable-next-line react/jsx-no-duplicate-props
             className="slidingmenu"
         > 
             {/* <h3>{menuTitle}</h3> */}
@@ -20,10 +32,14 @@ function SlidingMenu({items, menuTitle, children, slideright}){
             <div id="item_cont" className={slide?"slide":""}>
                 {items.map((o,i)=>{
                     return (
-                        <MenuItem {...o} />
+                        <MenuItem>
+                            <MenuItemDigi {...o} />
+                        </MenuItem>
+                        
                     )
                 })}
             </div>
+ 
         </div>
     )
 }
@@ -38,7 +54,11 @@ SlidingMenu.defaultProps = {
     },{
         key: '3',
         itemTitle:' View Menu'
+    },{
+        key: '4',
+        itemTitle:' Account'
     }],
+   
     menuTitle:"Sliding Menu",
     children:null,
     slideright:false

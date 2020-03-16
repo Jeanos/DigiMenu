@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../../css/app.scss';
 import { MdAddAPhoto } from "react-icons/md";
 
-export default class imageUploader extends Component {
+export default class ImageUploader extends Component {
 
     fileObj = [];
     fileArray = [];
@@ -31,11 +31,11 @@ export default class imageUploader extends Component {
 
     render() {
         return (
-            <form>
-                
+            <div className="center">
+                <form>
                 <div className="flexImageUpload">
                 <div className="form-group">
-                <label for="fileUpload" class="custom-file-upload center">
+                <label for="fileUpload" class="custom-file-upload " >
                     <MdAddAPhoto size={40}/>
                 </label>                    
                 <input id="fileUpload" type="file" name="Upload your Image" className="form-control" onChange={this.uploadMultipleFiles} multiple />
@@ -50,6 +50,8 @@ export default class imageUploader extends Component {
                 {/* <button type="button" className="btn btn-danger btn-block" onClick={this.uploadFiles}>Upload</button> */}
             </div>
             </form >
+            </div>
+            
         )
     }
 }

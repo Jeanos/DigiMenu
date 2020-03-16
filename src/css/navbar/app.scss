@@ -1,19 +1,16 @@
 @mixin pageConfig {
-
-    background-Color: #eee !important;
-      border-Radius: 5px;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #ddd;
-      display: flex;
-      flex-Direction: column;
-      height: 100;
-      width: 100%;
-      margin: 40;
-      color: red !important;
-      padding: 20;
-      justify-Content: center;
-      align-Items: center;
+  border-Radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+  display: flex;
+  flex-Direction: column;
+  height: 100;
+  width: 100%;
+  margin: 40;
+  padding: 20;
+  justify-Content: center;
+  align-Items: center;
 }
 .imageSize{
   height: 100px;
@@ -30,6 +27,7 @@ input[type="file"] {
   display: none;
 }
 .custom-file-upload {
+  
   border-width: 1px ;
   border-color:#eee;
   background:white;
@@ -50,9 +48,11 @@ input[type="file"] {
 }
 
 .menu_item {
-  margin: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
+  width: '100%';
 }
 .main{
   @include pageConfig();
