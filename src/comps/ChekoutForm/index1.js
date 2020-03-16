@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {loadStripe} from '@stripe/stripe-js';
-import {CardElement, Elements, useElements, useStripe} from '@stripe/react-stripe-js';
+import {CardElement, Elements, useElements} from '@stripe/react-stripe-js';
 import '../../css/details.scss';
 
 const CARD_OPTIONS = {
@@ -98,7 +98,7 @@ const ResetButton = ({onClick}) => (
 );
 
 const CheckoutForm = () => {
-  const stripe = useStripe();
+  // const stripe = useStripe();
   const elements = useElements();
   const [error, setError] = useState(null);
   const [cardComplete, setCardComplete] = useState(false);

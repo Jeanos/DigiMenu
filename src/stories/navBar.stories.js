@@ -17,6 +17,5 @@ export const defaultMainHeaderWithTitle = () => {
 }
 
 export const SlidingMenu1 = () =>{
-  return <SlidingMenu
-  />;
+  return <SlidingMenu />;
 }

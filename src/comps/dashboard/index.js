@@ -15,7 +15,7 @@ import {
 
 function Dashboard() {
 
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+  const [selectedDate, setSelectedDate] = React.useState(new Date('2020-08-18T21:11:54'));
 
   const handleDateChange = date => {
     setSelectedDate(date);
@@ -32,7 +32,7 @@ function Dashboard() {
           format="MM/dd/yyyy"
           margin="normal"
           id="date-picker-inline"
-          label="Your Start Day By Day"
+          label="Your Stats Day By Day"
           value={selectedDate}
           onChange={handleDateChange}
           KeyboardButtonProps={{

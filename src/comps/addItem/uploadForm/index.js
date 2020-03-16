@@ -66,6 +66,7 @@ function UploadForm() {
   
 
   return (
+    <Router>
     <div className="centerIt">
         <div className="inputSize">
       <form  noValidate autoComplete="off">
@@ -137,6 +138,7 @@ function UploadForm() {
         </DialogActions>
       </Dialog>
   </div>
+  </Router>
 
   );
 }

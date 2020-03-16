@@ -54,7 +54,6 @@ SlidingMenu.defaultProps = {
     },{
         key: '3',
         itemTitle:' View Menu'
-    
     // },{
     //     key: '4',
     //     itemTitle:' Account'

@@ -1,12 +1,12 @@
 import React from 'react';
-import MyCheckoutForm from '../comps/ChekoutForm';
+import CheckoutForm from '../comps/ChekoutForm/';
 //import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'Checkout Form',
-  component: MyCheckoutForm,
+  component: CheckoutForm,
 };
 
 export const defaultCheckoutForm = () => {
-  return <MyCheckoutForm />;
+  return <CheckoutForm />;
 }
