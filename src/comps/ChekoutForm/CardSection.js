@@ -3,7 +3,7 @@
 */
 import React from 'react';
 import {CardElement} from '@stripe/react-stripe-js';
-import '../../comps/ChekoutForm/CardSectionStyle.css'
+import './CardSectionStyle.css';
 
 const CARD_ELEMENT_OPTIONS = {
   style: {

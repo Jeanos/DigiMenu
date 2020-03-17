@@ -1,27 +1,20 @@
-import React from 'react'
-import StripeCheckout from 'react-stripe-checkout';
- 
-export default class CheckoutForm extends React.Component {
-  onToken = (token) => {
-    fetch('/http://www.3jsoft.ca/payment', {
-      method: 'POST',
-      body: JSON.stringify(token),
-    }).then(response => {
-      response.json().then(data => {
-        alert(`We are in business, ${data.email}`);
-      });
-    });
-  }
- 
-  // ...
- 
-  render() {
-    return (
-      // ...
-      <StripeCheckout
-        token={this.onToken}
-        stripeKey="pk_test_ZJebC7QzVpc7lE0soX5Lodvp00qAczwIVv"
-      />
-    )
-  }
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
+import CheckoutForm from './CheckoutForm';
+
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe("pk_test_ZJebC7QzVpc7lE0soX5Lodvp00qAczwIVv");
+
+function App() {
+  return (
+    <Elements stripe={stripePromise}>
+      <CheckoutForm />
+    </Elements>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
