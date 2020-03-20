@@ -18,7 +18,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import '../../../css/app.scss';
-import CheckoutForm from '../../ChekoutForm/CheckoutForm.js';
+import CheckoutForm from '../../ChekoutForm';
 
 
 const stripePromise = loadStripe('pk_test_ZJebC7QzVpc7lE0soX5Lodvp00qAczwIVv');

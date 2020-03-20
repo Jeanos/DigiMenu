@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckoutForm from '../comps/ChekoutForm/';
+import CheckoutForm from '../comps/ChekoutForm/CardSection';
 //import {action} from '@storybook/addon-actions';
 
 export default {

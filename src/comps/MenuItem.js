@@ -42,7 +42,7 @@ function MenuItemDigi({itemTitle, onClick, active}){
     }
     return(
         
-             <Link to={goPath}>
+            <Link to={goPath}>
             <div>
                 <div  className={cn}>                
                     {iconDefault} 
@@ -51,8 +51,6 @@ function MenuItemDigi({itemTitle, onClick, active}){
                     
             </div>
             </Link>
-       
-           
        
         
     )
