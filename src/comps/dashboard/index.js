@@ -1,5 +1,5 @@
 import 'date-fns';
-import React , { useState } from 'react';
+import React , { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import DashboardItem from '../../comps/dashboard/dashboardItem/index';
 import '../../css/main.css';
@@ -13,14 +13,16 @@ import {
 // import TextField from '@material-ui/core/TextField';
 
 
-function Dashboard() {
 
+
+
+function Dashboard() {  
   const [selectedDate, setSelectedDate] = React.useState(new Date('2020-08-18T21:11:54'));
 
   const handleDateChange = date => {
     setSelectedDate(date);
   };
-
+  
   return (
     <div>
       

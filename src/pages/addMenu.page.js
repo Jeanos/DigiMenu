@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import ImageUploader from '../comps/addItem/imageUploader';
+import ImageUploaderComp from '../comps/addItem/imageUploader';
 import UploadForm from '../comps/addItem/uploadForm';
 import MainHeader from '../comps/menu/navbar/';
 
@@ -24,7 +24,7 @@ export default function AddMenuItem() {
         <MainHeader MenuTitle="Add a new Item on your menu"/>
         <div className={classes.root}>
           <div>
-            <ImageUploader />
+            <ImageUploaderComp />
             <UploadForm />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
@@ -40,29 +40,21 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const foodItem = {
-    name: 'Thai Red Curry + Prawns',
-    image: 'https://ichef.bbci.co.uk/wwfeatures/live/624_351/images/live/p0/7c/j8/p07cj8zj.jpg',
-    price: 22.99,
-    description: 'Thai coconut red Curry with prawns is easy, quick, and full of flavour! On your table in less than 25 minutes, dinner has never been so easy!'
-};
 
-const Hummus = {
-  name: 'Hummus',
-  image: 'https://www.cookingclassy.com/wp-content/uploads/2014/03/hummus-31.jpg',
-  price: 14.59,
-  description: 'Hummus, quick, and full of flavour! On your table in less than 25 minutes, dinner has never been so easy!'
-};
+var j = {};
 
-export default function MenuPage() {
-  const [value, setValue] = React.useState(2);
+
+
+
+function MenuPage() {
+
+  const [value, setValue] = React.useState(0);
+  const [dataFet, setDataFet] = useState([]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   const classes = useStyles();
-
   const SearchBar = () => {
     return (
         <Paper component="form" className={classes.root, "ButtonResize"}>
@@ -70,29 +62,39 @@ export default function MenuPage() {
             <SearchIcon />
           </IconButton>
           <InputBase
-            className={classes.input}
-            placeholder=""
+            className = {classes.input}
+            placeholder = ""
             inputProps={{ 'aria-label': '' }}
           />
         </Paper>
     )
   };
-
   const FoodCategorySelect = () => {
-      return (
-          <div className={classes.categoryContainer}>
-            <FormControl className={classes.formControl}>
-                <Select native defaultValue="" input={<Input id="grouped-native-select" />}>
-                    <option value={1}>Seafood</option>
-                    <option value={2}>Option 2</option>
-                </Select>
-            </FormControl>
-        </div>
-      )
-  };
+    return (
+        <div className={classes.categoryContainer}>
+          <FormControl className={classes.formControl}>
+              <Select native defaultValue="" input={<Input id="grouped-native-select" />}>
+                  <option value={1}>Seafood</option>
+                  <option value={2}>Option 2</option>
+              </Select>
+          </FormControl>
+      </div>
+    )
+};
+var fetchData = async () => {
+  const response = await fetch('https://digimenu-dev.appspot.com/menu');
+  j = await response.json();
+  setDataFet(j);
+  console.log(dataFet);
+}
+useEffect(() => {
+  fetchData();
+},[]);
+
+console.log('Data Fetched ', dataFet);
 
   return (
-    <div>
+  <div>
         <MainHeader/>
         <SearchBar />
         <Tabs value={value}
@@ -107,9 +109,19 @@ export default function MenuPage() {
           <Tab label="Main" />
           <Tab label="Dessert" />
         </Tabs>
+
         <FoodCategorySelect />
-        <FoodCard className="bottomBorder" food={foodItem}/>
-        <FoodCard food={Hummus}/>
-    </div>
-  )
-}
+      
+        {
+          dataFet.map((postDetails, i) => {
+            return(
+            
+               <FoodCard key={i} food={postDetails}/>
+            
+            )}
+          )
+      }
+</div>
+  )}
+
+export default MenuPage;

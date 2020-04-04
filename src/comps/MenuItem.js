@@ -13,6 +13,7 @@ import {
 import DashboardPage from '../pages/dashboard.page';
 import AddMenuItem from '../pages/addMenu.page';
 import MenuPage from '../pages/menu.page';
+import Account from '../pages/signIn.page';
 import '../css/app.scss';
 
 function MenuItemDigi({itemTitle, onClick, active}){
@@ -40,6 +41,8 @@ function MenuItemDigi({itemTitle, onClick, active}){
         iconDefault = <MdAccountCircle  size={20}/>
         goPath = "/account";
     }
+
+    
     return(
         
             <Link to={goPath}>

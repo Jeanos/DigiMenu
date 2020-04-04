@@ -1,10 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import ImageUploaderComp from '../comps/addItem/imageUploader';
-import UploadForm from '../comps/addItem/uploadForm';
-import MainHeader from '../comps/menu/navbar/';
-import Dashboard from '../comps/dashboard/';
+import SignIn from '../comps/signIn/';
+// import MainHeader from '../comps/menu/navbar';
 
 const CustomStyle = makeStyles(theme => ({
   root: {
@@ -18,14 +16,14 @@ const CustomStyle = makeStyles(theme => ({
   },
 }));
 
-export default function DashboardPage() {
+export default function AccountPage() {
   const classes = CustomStyle();
     return (
       <div>
-        <MainHeader MenuTitle="Dashboard"/>
+        {/* <MainHeader MenuTitle="Account"/> */}
         <div className={classes.root}>
         <div>
-        <Dashboard />
+        <SignIn />
         </div>
                  
           

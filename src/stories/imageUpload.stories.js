@@ -1,13 +1,13 @@
 import React from 'react';
-import ImageUploader from '../comps/addItem/imageUploader/index';
+import ImageUploaderComp from '../comps/addItem/imageUploader/index';
 //import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'ImageUploader',
-  component: ImageUploader,
+  title: 'ImageUploaderComp',
+  component: ImageUploaderComp,
 };
 
 export const MainImageUploader = () => {
-  return <ImageUploader />;
+  return <ImageUploaderComp />;
 }
 

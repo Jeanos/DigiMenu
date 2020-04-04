@@ -9,9 +9,6 @@ import {MdStar} from "react-icons/md";
 import {MdStarBorder} from "react-icons/md";
 
 
-
-
-
 const useStyles = makeStyles({
     root: {
       width: '55%',
@@ -85,6 +82,7 @@ FoodCard.defaultProps = {
     food: {
         name: '',
         image: '',
-        description: ''
+        description: '',
+        price: ''
     }
 };
