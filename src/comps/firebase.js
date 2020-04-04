@@ -3,13 +3,13 @@ import 'firebase/auth'
 import 'firebase/firebase-firestore'
 
 const config = {
-  apiKey: "AIzaSyBeWwnmSEI89ydZMVCaM3mUDECkfiuHJgo",
-  authDomain: "digimenu-dev.firebaseapp.com",
-  databaseURL: "https://digimenu-dev.firebaseio.com",
-  projectId: "digimenu-dev",
-  storageBucket: "digimenu-dev.appspot.com",
-  messagingSenderId: "803194380427",
-  appId: "1:803194380427:web:e7d6f6c75a8ee22d71f48e"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 class Firebase {
 	constructor() {
