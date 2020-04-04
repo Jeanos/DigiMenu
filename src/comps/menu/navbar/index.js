@@ -108,7 +108,7 @@ export default function MainHeader({MenuTitle}) {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" className={classes.title}>
-            Cactus Club Admin Panel
+            Lagos Chop
         </Typography>
         <Button onClick={handleClickOpen} variant="contained" color="primary">Go Premium *</Button>
         </Toolbar>

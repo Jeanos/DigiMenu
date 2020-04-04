@@ -11,7 +11,7 @@ import {MdStarBorder} from "react-icons/md";
 
 const useStyles = makeStyles({
     root: {
-      width: '55%',
+      width: '80%',
       boxShadow: 'none',
       borderRadius: '0px'
     },

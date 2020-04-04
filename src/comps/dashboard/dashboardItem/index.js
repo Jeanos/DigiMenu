@@ -65,7 +65,7 @@ DashboardItem.defaultProps = {
     border:'1px solid #ddd',
    
     height: 100,
-    width:'50%',
+    width:'80%',
     margin: 10,
     color: "white",
     padding: 20,
