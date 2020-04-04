@@ -58,7 +58,7 @@ function MenuPage() {
   const classes = useStyles();
   const SearchBar = () => {
     return (
-        <Paper component="form" className={classes.root, "ButtonResize"}>
+        <Paper component="form" style={{display: 'flex'}} className={classes.root, "ButtonResize"}>
            <IconButton type="submit"  className={classes.iconButton} aria-label="search">
             <SearchIcon />
           </IconButton>
