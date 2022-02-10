@@ -66,6 +66,6 @@
     "@storybook/addons": "^5.3.14",
     "@storybook/preset-create-react-app": "^2.0.0",
     "@storybook/react": "^5.3.14",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
